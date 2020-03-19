@@ -1,4 +1,4 @@
-const getMeDogs = require('./index');
+const dogsClient = require('./index');
 
 const path = require('path');
 const Pact = require('@pact-foundation/pact').Pact;
@@ -20,7 +20,7 @@ describe("Dog's API", () => {
 
     const EXPECTED_BODY = [
       {
-        dog: 1
+        dogs: ['bulldog', 'schafer', 'pug']
       }
     ];
 
@@ -47,17 +47,19 @@ describe("Dog's API", () => {
 
     // Act
     const urlWithPort = url + ':' + port;
-    const response = await getMeDogs(urlWithPort);
+    const response = await dogsClient.getMeDogs(urlWithPort);
 
     // Assert
+
+    // UNIT TEST
     expect(response.headers['content-type']).toEqual(
       'application/json; charset=utf-8'
     );
     expect(response.data).toEqual(EXPECTED_BODY);
     expect(response.status).toEqual(200);
 
+    // Makes json executable test file
     await providerMockServer.verify();
-
     await providerMockServer.finalize();
   });
 });

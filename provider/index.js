@@ -6,6 +6,7 @@ class Repository {
     this.entities = [];
   }
 
+  // repository.setEntities(['schaefer'])
   setEntities(newEntities) {
     this.entities = newEntities;
   }
@@ -14,7 +15,13 @@ class Repository {
 const dogsRepository = new Repository();
 
 server.get('/dogs', (_request, response) => {
-  response.json(dogsRepository.entities);
+  const body = [
+    {
+      dogs: dogsRepository.entities
+    }
+  ];
+
+  response.json(body);
 });
 
 module.exports = { server, dogsRepository };

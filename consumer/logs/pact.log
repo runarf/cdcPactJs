@@ -1,5 +1,5 @@
-I, [2020-03-19T11:55:12.786484 #24727]  INFO -- : Registered expected interaction GET /dogs
-D, [2020-03-19T11:55:12.787505 #24727] DEBUG -- : {
+I, [2020-03-19T14:25:30.610540 #27196]  INFO -- : Registered expected interaction GET /dogs
+D, [2020-03-19T14:25:30.612200 #27196] DEBUG -- : {
   "description": "a request for dogs",
   "providerState": "I have one dog",
   "request": {
@@ -16,13 +16,17 @@ D, [2020-03-19T11:55:12.787505 #24727] DEBUG -- : {
     },
     "body": [
       {
-        "dog": 1
+        "dogs": [
+          "bulldog",
+          "schafer",
+          "pug"
+        ]
       }
     ]
   }
 }
-I, [2020-03-19T11:55:12.810409 #24727]  INFO -- : Received request GET /dogs
-D, [2020-03-19T11:55:12.810783 #24727] DEBUG -- : {
+I, [2020-03-19T14:25:30.623042 #27196]  INFO -- : Received request GET /dogs
+D, [2020-03-19T14:25:30.624119 #27196] DEBUG -- : {
   "path": "/dogs",
   "query": "",
   "method": "get",
@@ -34,18 +38,22 @@ D, [2020-03-19T11:55:12.810783 #24727] DEBUG -- : {
     "Version": "HTTP/1.1"
   }
 }
-I, [2020-03-19T11:55:12.811586 #24727]  INFO -- : Found matching response for GET /dogs
-D, [2020-03-19T11:55:12.811836 #24727] DEBUG -- : {
+I, [2020-03-19T14:25:30.625542 #27196]  INFO -- : Found matching response for GET /dogs
+D, [2020-03-19T14:25:30.626539 #27196] DEBUG -- : {
   "status": 200,
   "headers": {
     "Content-Type": "application/json; charset=utf-8"
   },
   "body": [
     {
-      "dog": 1
+      "dogs": [
+        "bulldog",
+        "schafer",
+        "pug"
+      ]
     }
   ]
 }
-I, [2020-03-19T11:55:12.831860 #24727]  INFO -- : Verifying - interactions matched
-I, [2020-03-19T11:55:12.845120 #24727]  INFO -- : Cleared interactions
-I, [2020-03-19T11:55:12.860761 #24727]  INFO -- : Writing pact for DogProvider to /home/runar/dev/work/cdc/knowledgeExchange/consumer/pacts/dogconsumer-dogprovider.json
+I, [2020-03-19T14:25:30.637339 #27196]  INFO -- : Verifying - interactions matched
+I, [2020-03-19T14:25:30.647581 #27196]  INFO -- : Cleared interactions
+I, [2020-03-19T14:25:30.656384 #27196]  INFO -- : Writing pact for DogProvider to /home/runar/dev/work/cdc/knowledgeExchange/consumer/pacts/dogconsumer-dogprovider.json

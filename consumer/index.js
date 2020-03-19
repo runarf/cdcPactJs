@@ -3,13 +3,18 @@ const axios = require('axios');
 const getMeDogs = async urlWithPort => {
   const fullUrl = urlWithPort + '/dogs';
 
-  const options = {
+  const axiosOptions = {
     headers: { Accept: 'application/json' }
   };
 
-  const dogs = await axios.get(fullUrl, options);
+  // http://dogsapi.com/dogs
+  const dogs = await axios.get(fullUrl, axiosOptions);
 
   return dogs;
 };
 
-module.exports = getMeDogs;
+const dogsClient = {
+  getMeDogs
+};
+
+module.exports = dogsClient;

@@ -1,6 +1,6 @@
 const { Verifier } = require('@pact-foundation/pact');
 const path = require('path');
-let { server, dogsRepository } = require('./index');
+const { server, dogsRepository } = require('./index');
 
 describe('Pact Verification', () => {
   const port = 8080;
@@ -13,7 +13,7 @@ describe('Pact Verification', () => {
 
   it('should validate the expectations of dog', () => {
     // Arrange
-    dogsRepository.setEntities([{ dog: 1 }]);
+    dogsRepository.setEntities(['bulldog', 'schafer', 'pug']);
 
     const options = {
       providerBaseUrl: 'http://localhost:' + port,
