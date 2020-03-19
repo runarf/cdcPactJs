@@ -1,0 +1,51 @@
+I, [2020-03-19T11:55:12.786484 #24727]  INFO -- : Registered expected interaction GET /dogs
+D, [2020-03-19T11:55:12.787505 #24727] DEBUG -- : {
+  "description": "a request for dogs",
+  "providerState": "I have one dog",
+  "request": {
+    "method": "GET",
+    "path": "/dogs",
+    "headers": {
+      "Accept": "application/json"
+    }
+  },
+  "response": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json; charset=utf-8"
+    },
+    "body": [
+      {
+        "dog": 1
+      }
+    ]
+  }
+}
+I, [2020-03-19T11:55:12.810409 #24727]  INFO -- : Received request GET /dogs
+D, [2020-03-19T11:55:12.810783 #24727] DEBUG -- : {
+  "path": "/dogs",
+  "query": "",
+  "method": "get",
+  "headers": {
+    "Accept": "application/json",
+    "User-Agent": "axios/0.19.0",
+    "Host": "localhost:8992",
+    "Connection": "close",
+    "Version": "HTTP/1.1"
+  }
+}
+I, [2020-03-19T11:55:12.811586 #24727]  INFO -- : Found matching response for GET /dogs
+D, [2020-03-19T11:55:12.811836 #24727] DEBUG -- : {
+  "status": 200,
+  "headers": {
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "body": [
+    {
+      "dog": 1
+    }
+  ]
+}
+I, [2020-03-19T11:55:12.831860 #24727]  INFO -- : Verifying - interactions matched
+I, [2020-03-19T11:55:12.845120 #24727]  INFO -- : Cleared interactions
+I, [2020-03-19T11:55:12.860761 #24727]  INFO -- : Writing pact for DogProvider to /home/runar/dev/work/cdc/knowledgeExchange/consumer/pacts/dogconsumer-dogprovider.json
