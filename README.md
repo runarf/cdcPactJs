@@ -2,6 +2,8 @@
 
 See README file in each folder
 
+Background: https://martinfowler.com/articles/practical-test-pyramid.html#ContractTests
+
 Source code: https://github.com/runarf/cdcPactJs
 
 Steps:
@@ -11,7 +13,8 @@ Steps:
 - [] 3. The providing team runs the CDC tests continuously and keeps them green
 - [] 4. Both teams talk to each other once the CDC tests break
 
-Speculations:
+## Should we use consumer driven contract tests
+
 Pros:
 
 - Less breaking changes.
